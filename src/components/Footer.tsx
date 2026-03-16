@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Box, Container, Typography, Link, Divider, Stack, useTheme } from '@mui/material';
+import { Box, Container, Typography, Link, Divider, useTheme } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -21,9 +21,14 @@ const Footer = () => {
         borderColor: 'divider',
       }}
     >
-      <Container maxWidth="lg">
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent="space-between">
-          <Box sx={{ flex: 1 }}>
+      <Container maxWidth="xl">
+        <Box 
+          display="grid" 
+          gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr', md: '1.5fr 1fr 1fr 1.5fr' }} 
+          gap={4}
+          justifyContent="space-between"
+        >
+          <Box>
             <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 800, mb: 2 }}>
               Vihan tours & travels
             </Typography>
@@ -32,7 +37,7 @@ const Footer = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ flex: 1 }}>
+          <Box>
             <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 700, mb: 2 }}>
               Quick Links
             </Typography>
@@ -45,7 +50,7 @@ const Footer = () => {
             </Box>
           </Box>
 
-          <Box sx={{ flex: 1 }}>
+          <Box>
             <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 700, mb: 2 }}>
               Contact Us
             </Typography>
@@ -64,7 +69,34 @@ const Footer = () => {
               </Box>
             </Box>
           </Box>
-        </Stack>
+
+          <Box>
+            <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 700, mb: 2 }}>
+              Our Location
+            </Typography>
+            <Box 
+              sx={{ 
+                width: '100%', 
+                height: 200, 
+                borderRadius: 2, 
+                overflow: 'hidden',
+                boxShadow: theme.palette.mode === 'dark' ? '0 4px 12px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.05)',
+                bgcolor: 'background.paper',
+              }}
+            >
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15392.65650130!2d73.83226!3d15.385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb643d9b5e5fb%3A0xe7582eb7bc36df2!2sDabolim%2C%20Goa!5e0!3m2!1sen!2sin!4v1716500000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Vihan Tours & Travels Location"
+              />
+            </Box>
+          </Box>
+        </Box>
         
         <Divider sx={{ my: 4 }} />
         

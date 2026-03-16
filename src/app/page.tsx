@@ -1,6 +1,10 @@
 "use client";
 import { Box, Container, Typography, Button, useTheme } from '@mui/material';
 import BookingForm from '@/components/BookingForm';
+import FAQ from '@/components/FAQ';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import AboutUs from '@/components/AboutUs';
+import Image from 'next/image';
 
 export default function Home() {
   const theme = useTheme();
@@ -106,10 +110,12 @@ export default function Home() {
             ].map((car) => (
               <Box key={car.name} className="glass-card flex flex-col overflow-hidden group">
                 <Box sx={{ height: 260, width: '100%', position: 'relative', overflow: 'hidden', bgcolor: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)' }}>
-                  <img 
+                  <Image 
                     src={car.img} 
-                    alt={car.name} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                    alt={`${car.name} - Premium Car Rental in Goa by Vihan Tours & Travels`} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105" 
                   />
                   <Box className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Box>
@@ -137,6 +143,14 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
+      {/* About Us Section */}
+      <AboutUs />
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* FAQ Section */}
+      <FAQ />
     </>
   );
 }
