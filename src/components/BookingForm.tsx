@@ -34,8 +34,8 @@ const BookingForm = () => {
   };
 
   return (
-    <Box className="glass-card" sx={{ p: 4 }}>
-      <Typography variant="h5" sx={{ mb: 3, fontWeight: 700, color: 'white' }}>
+    <Box className="glass-card" sx={{ p: 4, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}>
+      <Typography variant="h5" sx={{ mb: 3, fontWeight: 800, color: 'text.primary' }}>
         Book Your Ride
       </Typography>
       <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
@@ -45,7 +45,7 @@ const BookingForm = () => {
           onChange={(e, newValue) => setPickup(newValue || '')}
           freeSolo
           renderInput={(params) => (
-            <TextField {...params} label="Pickup Location *" variant="filled" fullWidth />
+            <TextField {...params} label="Pickup Location *" variant="outlined" fullWidth />
           )}
         />
         <Autocomplete
@@ -54,13 +54,13 @@ const BookingForm = () => {
           onChange={(e, newValue) => setDropoff(newValue || '')}
           freeSolo
           renderInput={(params) => (
-            <TextField {...params} label="Drop-off Location" variant="filled" fullWidth />
+            <TextField {...params} label="Drop-off Location" variant="outlined" fullWidth />
           )}
         />
         <TextField
           select
           label="Car Type"
-          variant="filled"
+          variant="outlined"
           value={carType}
           onChange={(e) => setCarType(e.target.value)}
           fullWidth
@@ -74,7 +74,7 @@ const BookingForm = () => {
         <TextField
           type="date"
           label="Pickup Date"
-          variant="filled"
+          variant="outlined"
           value={date}
           onChange={(e) => setDate(e.target.value)}
           InputLabelProps={{ shrink: true }}
