@@ -1,10 +1,10 @@
 "use client";
-import { Box, Container, Typography, Button, useTheme } from '@mui/material';
+import { Box, Container, Typography, useTheme } from '@mui/material';
 import BookingForm from '@/components/BookingForm';
 import FAQ from '@/components/FAQ';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import AboutUs from '@/components/AboutUs';
-import Image from 'next/image';
+import Fleet from '@/components/Fleet';
 
 export default function Home() {
   const theme = useTheme();
@@ -89,60 +89,7 @@ export default function Home() {
       </Box>
 
       {/* Fleet Section */}
-      <Box sx={{ bgcolor: 'background.default', py: { xs: 10, md: 16 } }}>
-        <Container maxWidth="xl">
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h3" color="text.primary" fontWeight={800} mb={2}>
-              Our Premium Fleet
-            </Typography>
-            <Typography variant="h6" color="text.secondary" fontWeight={400} maxWidth="md" mx="auto">
-              Choose from our wide range of well-maintained, comfortable vehicles for the perfect Goan getaway.
-            </Typography>
-          </Box>
-          
-          <Box display="grid" gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr', md: 'repeat(3, 1fr)' }} gap={4}>
-            {[
-              { name: 'Baleno', type: 'MT / AT', img: '/cars/baleno.png' },
-              { name: 'Ertiga', type: 'MT / AT', img: '/cars/ertiga.png' },
-              { name: 'Thar', type: 'MT / AT', img: '/cars/thar.png' },
-              { name: 'Swift', type: 'MT / AT', img: '/cars/swift.png' },
-              { name: 'Fortuner', type: 'MT / AT', img: '/cars/fortuner.png' }
-            ].map((car) => (
-              <Box key={car.name} className="glass-card flex flex-col overflow-hidden group">
-                <Box sx={{ height: 260, width: '100%', position: 'relative', overflow: 'hidden', bgcolor: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)' }}>
-                  <Image 
-                    src={car.img} 
-                    alt={`${car.name} - Premium Car Rental in Goa by Vihan Tours & Travels`} 
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105" 
-                  />
-                  <Box className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </Box>
-                <Box sx={{ p: 4, flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', bgcolor: 'background.paper', borderTop: '1px solid', borderColor: 'divider' }}>
-                  <Box>
-                    <Typography variant="h5" color="text.primary" fontWeight="800" mb={1}>{car.name}</Typography>
-                    <Box sx={{ display: 'inline-block', px: 2, py: 0.5, bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 4, mb: 3 }}>
-                       <Typography variant="body2" fontWeight="700">{car.type}</Typography>
-                    </Box>
-                  </Box>
-                  <Button 
-                    variant="contained" 
-                    color="primary" 
-                    fullWidth 
-                    size="large"
-                    href={`https://wa.me/919876543210?text=Hello%20Vihan%20tours%20%26%20travels!%20I%20am%20interested%20in%20booking%20the%20${car.name}%20(${car.type}).`} 
-                    target="_blank"
-                    sx={{ fontWeight: 'bold', py: 1.5, boxShadow: '0 4px 14px 0 rgba(14, 165, 233, 0.39)', '&:hover': { boxShadow: '0 6px 20px rgba(14, 165, 233, 0.23)' } }}
-                  >
-                    Book Now
-                  </Button>
-                </Box>
-              </Box>
-            ))}
-          </Box>
-        </Container>
-      </Box>
+      <Fleet />
       {/* About Us Section */}
       <AboutUs />
 
