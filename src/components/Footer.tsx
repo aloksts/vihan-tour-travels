@@ -12,7 +12,7 @@ const Footer = () => {
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent="space-between">
           <Box sx={{ flex: 1 }}>
             <Typography variant="h6" sx={{ color: 'white', fontWeight: 700, mb: 2 }}>
-              Vihan Travels
+              Vihan tours & travels
             </Typography>
             <Typography variant="body2" sx={{ mb: 2, lineHeight: 1.8 }}>
               Premium car rental services based in Goa Dabolim. Experience the beauty of Goa with our comfortable and reliable fleet.
@@ -56,7 +56,7 @@ const Footer = () => {
         <Divider sx={{ borderColor: 'rgba(255,255,255,0.1)', my: 4 }} />
         
         <Typography variant="body2" align="center" sx={{ color: 'grey.500' }}>
-          &copy; {new Date().getFullYear()} Vihan Tour and Travels. All rights reserved.
+          &copy; {new Date().getFullYear()} Vihan tours & travels. All rights reserved.
         </Typography>
       </Container>
     </Box>

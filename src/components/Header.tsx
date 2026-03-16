@@ -23,7 +23,7 @@ const Header = () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <DirectionsCarIcon sx={{ color: 'primary.main', fontSize: 32 }} />
             <Typography variant="h6" sx={{ fontWeight: 800, color: 'white', letterSpacing: 1 }}>
-              Vihan <Typography component="span" sx={{ color: 'primary.main', fontWeight: 800, fontSize: 'inherit' }}>Travels</Typography>
+              Vihan <Typography component="span" sx={{ color: 'primary.main', fontWeight: 800, fontSize: 'inherit' }}>tours & travels</Typography>
             </Typography>
           </Box>
 
@@ -52,7 +52,7 @@ const Header = () => {
             variant="contained"
             color="secondary"
             startIcon={<WhatsAppIcon />}
-            href="https://wa.me/919876543210?text=Hello%20Vihan%20Travels!%20I%20would%20like%20to%20inquire%20about%20a%20car%20rental%20in%20Goa."
+            href="https://wa.me/919876543210?text=Hello%20Vihan%20tours%20%26%20travels!%20I%20would%20like%20to%20inquire%20about%20a%20car%20rental%20in%20Goa."
             target="_blank"
             sx={{ display: { xs: 'flex' }, fontWeight: 'bold' }}
           >

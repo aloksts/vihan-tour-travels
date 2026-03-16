@@ -14,20 +14,22 @@ const locations = [
 ];
 
 const carTypes = [
-  'Hatchback (Swift, i20)',
-  'Sedan (Dzire, Etios)',
-  'SUV (Innova, Ertiga)',
-  'Luxury (BMW, Mercedes)'
+  'Baleno MT',
+  'Baleno AT',
+  'Ertiga MT / AT',
+  'Thar MT / AT',
+  'Swift MT / AT',
+  'Fortuner MT / AT'
 ];
 
 const BookingForm = () => {
   const [pickup, setPickup] = useState('Goa Dabolim Airport');
   const [dropoff, setDropoff] = useState('');
-  const [carType, setCarType] = useState('Hatchback (Swift, i20)');
+  const [carType, setCarType] = useState('Baleno MT');
   const [date, setDate] = useState('');
   
   const handleBooking = () => {
-    const message = `Hello Vihan Travels! I want to book a car.%0APickup: ${pickup}%0ADropoff: ${dropoff || 'Not specified'}%0ACar Type: ${carType}%0ADate: ${date}`;
+    const message = `Hello Vihan tours & travels! I want to book a car.%0APickup: ${pickup}%0ADropoff: ${dropoff || 'Not specified'}%0ACar Type: ${carType}%0ADate: ${date}`;
     window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
   };
 
