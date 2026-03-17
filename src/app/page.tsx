@@ -35,17 +35,23 @@ export default function Home() {
           bgcolor: '#020617', // Force dark background for premium look
         }}
       >
-        {/* Background Overlay */}
-        <Box sx={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+        {/* Background Layer with Dark Gradient */}
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            inset: 0, 
+            zIndex: 0,
+            background: 'linear-gradient(to right, #020617 0%, rgba(2, 6, 23, 0.9) 30%, rgba(2, 6, 23, 0.4) 100%)',
+          }}
+        >
           <Image
-            src="https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-            alt="Premium Car Rental Goa - Vihan Tour and Travels"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            alt="Luxury Car Rental Goa - Vihan Tour and Travels"
             fill
             priority
-            className="object-cover opacity-30 mix-blend-luminosity"
+            className="object-cover opacity-40 mix-blend-overlay"
           />
         </Box>
-        <div className={`absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-900/30`}></div>
 
         <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 10 }}>
           <Box display="grid" gridTemplateColumns={{ xs: '1fr', lg: '1fr 400px' }} gap={{ xs: 6, lg: 12 }} alignItems="center">
@@ -82,15 +88,15 @@ export default function Home() {
               </Typography>
               
               <Box className="flex flex-wrap gap-4">
-                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px] bg-slate-900/50">
+                <Box sx={{ p: 5, borderRadius: 4, flex: 1, minWidth: '140px', bgcolor: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                   <Typography variant="h5" color="#f8fafc" fontWeight="800">24/7</Typography>
                   <Typography variant="body2" color="#94a3b8" fontWeight="500">Customer Support</Typography>
                 </Box>
-                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px] bg-slate-900/50">
+                <Box sx={{ p: 5, borderRadius: 4, flex: 1, minWidth: '140px', bgcolor: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                   <Typography variant="h5" color="#f8fafc" fontWeight="800">50+</Typography>
                   <Typography variant="body2" color="#94a3b8" fontWeight="500">Premium Cars</Typography>
                 </Box>
-                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px] bg-slate-900/50">
+                <Box sx={{ p: 5, borderRadius: 4, flex: 1, minWidth: '140px', bgcolor: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                   <Typography variant="h5" color="#f8fafc" fontWeight="800">100%</Typography>
                   <Typography variant="body2" color="#94a3b8" fontWeight="500">Satisfaction</Typography>
                 </Box>
