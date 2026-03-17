@@ -7,6 +7,8 @@ import FAQ from '@/components/FAQ';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import AboutUs from '@/components/AboutUs';
 import Fleet from '@/components/Fleet';
+import Image from 'next/image';
+
 
 export default function Home() {
   const theme = useTheme();
@@ -33,7 +35,15 @@ export default function Home() {
         }}
       >
         {/* Background Overlay */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-20 MixBlendMode-luminosity"></div>
+        <Box sx={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+          <Image
+            src="https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            alt="Premium Car Rental Goa - Vihan Tour and Travels"
+            fill
+            priority
+            className="object-cover opacity-20 mix-blend-luminosity"
+          />
+        </Box>
         <div className={`absolute inset-0 bg-gradient-to-r ${isDark ? 'from-slate-950 via-slate-900/95 to-slate-900/30' : 'from-slate-50 via-slate-100/95 to-slate-100/30'}`}></div>
 
         <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 10 }}>
