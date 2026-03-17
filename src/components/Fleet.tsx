@@ -14,7 +14,11 @@ const carsData = [
   { name: 'Fortuner', type: 'MT / AT', img: '/cars/fortuner.png', seats: 7, luggage: 4, fuel: 'Diesel' }
 ];
 
-const Fleet = () => {
+interface FleetProps {
+  onBookNow?: (carType: string) => void;
+}
+
+const Fleet = ({ onBookNow }: FleetProps) => {
   const theme = useTheme();
   const isDark = theme.palette.mode === 'dark';
 
