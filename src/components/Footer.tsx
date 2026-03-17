@@ -85,7 +85,7 @@ const Footer = () => {
               }}
             >
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15392.65650130!2d73.83226!3d15.385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb643d9b5e5fb%3A0xe7582eb7bc36df2!2sDabolim%2C%20Goa!5e0!3m2!1sen!2sin!4v1716500000000!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15392.54483737!2d73.8322623!3d15.385312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb643d9b5e5fb%3A0xe7582eb7bc36df2!2sDabolim%2C%20Goa!5e0!3m2!1sen!2sin!4v1716912345678!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

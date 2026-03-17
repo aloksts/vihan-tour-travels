@@ -137,7 +137,7 @@ export default function Home() {
             </Box>
             <Box sx={{ height: 450, borderRadius: 4, overflow: 'hidden', boxShadow: isDark ? '0 20px 40px -10px rgba(0,0,0,0.5)' : '0 20px 40px -10px rgba(0,0,0,0.1)' }}>
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3846.992683884814!2d73.83151801533285!3d15.385559089304323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfcbd43a123eb7%3A0xe53360bbed1af90a!2sDabolim%20Airport!5e0!3m2!1sen!2sin!4v1716912345678!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15392.54483737!2d73.8322623!3d15.385312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb643d9b5e5fb%3A0xe7582eb7bc36df2!2sDabolim%2C%20Goa!5e0!3m2!1sen!2sin!4v1716912345678!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
