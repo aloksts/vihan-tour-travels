@@ -78,8 +78,7 @@ const Fleet = ({ onBookNow }: FleetProps) => {
                   color="primary" 
                   fullWidth 
                   size="large"
-                  href={`https://wa.me/919876543210?text=Hello%20Vihan%20tours%20%26%20travels!%20I%20am%20interested%20in%20booking%20the%20${car.name}%20(${car.type}).`} 
-                  target="_blank"
+                  onClick={() => onBookNow && onBookNow(car.name + ' ' + car.type)}
                   sx={{ fontWeight: 'bold', py: 1.5, boxShadow: '0 4px 14px 0 rgba(14, 165, 233, 0.39)', '&:hover': { boxShadow: '0 6px 20px rgba(14, 165, 233, 0.23)' } }}
                 >
                   Book Now

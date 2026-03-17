@@ -36,6 +36,7 @@ const BookingForm = ({ initialCarType = 'Baleno MT', onClose }: BookingFormProps
   const handleBooking = () => {
     const message = `Hello Vihan tours & travels! I want to book a car.%0APickup: ${pickup}%0ADropoff: ${dropoff || 'Not specified'}%0ACar Type: ${carType}%0ADate: ${date}`;
     window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    if (onClose) onClose();
   };
 
   return (
