@@ -16,7 +16,7 @@ function MUIWrapper({ children }: { children: React.ReactNode }) {
     palette: {
       mode: (mounted && resolvedTheme === 'dark') ? 'dark' : 'light',
       primary: {
-        main: '#0ea5e9', // Sky 500 for a fresh, premium look
+        main: '#d4af37', // Metallic Gold for Luxury Premium look
       },
       secondary: {
         main: '#10b981', // Emerald 500

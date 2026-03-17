@@ -1,10 +1,19 @@
 "use client";
-import { Box, Container, Typography, Button, useTheme } from '@mui/material';
+import { Box, Container, Typography, Button, useTheme, Dialog, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import { useState } from 'react';
 import BookingForm from '@/components/BookingForm';
 
 export default function Home() {
   const theme = useTheme();
   const isDark = theme.palette.mode === 'dark';
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const [selectedCar, setSelectedCar] = useState('Baleno MT');
+
+  const handleOpenBooking = (carType: string) => {
+    setSelectedCar(carType);
+    setBookingModalOpen(true);
+  };
 
   return (
     <>
@@ -125,9 +134,8 @@ export default function Home() {
                     color="primary" 
                     fullWidth 
                     size="large"
-                    href={`https://wa.me/919876543210?text=Hello%20Vihan%20tours%20%26%20travels!%20I%20am%20interested%20in%20booking%20the%20${car.name}%20(${car.type}).`} 
-                    target="_blank"
-                    sx={{ fontWeight: 'bold', py: 1.5, boxShadow: '0 4px 14px 0 rgba(14, 165, 233, 0.39)', '&:hover': { boxShadow: '0 6px 20px rgba(14, 165, 233, 0.23)' } }}
+                    onClick={() => handleOpenBooking(car.name === 'Baleno' ? 'Baleno MT' : `${car.name} ${car.type}`)}
+                    sx={{ fontWeight: 'bold', py: 1.5, boxShadow: '0 4px 14px 0 rgba(212, 175, 55, 0.39)', '&:hover': { boxShadow: '0 6px 20px rgba(212, 175, 55, 0.23)' } }}
                   >
                     Book Now
                   </Button>
@@ -137,6 +145,57 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
+      {/* Location Section */}
+      <Box sx={{ bgcolor: isDark ? 'rgba(2, 6, 23, 0.6)' : 'rgba(255, 255, 255, 0.6)', py: { xs: 8, md: 12 }, borderTop: '1px solid', borderColor: 'divider' }}>
+        <Container maxWidth="xl">
+          <Box display="grid" gridTemplateColumns={{ xs: '1fr', lg: '1fr 1fr' }} gap={8} alignItems="center">
+            <Box>
+              <Typography variant="h3" color="text.primary" fontWeight={800} mb={3}>
+                Premium Fleet, Prime Location
+              </Typography>
+              <Typography variant="h6" color="text.secondary" fontWeight={400} mb={4} lineHeight={1.8}>
+                Located conveniently near Dabolim Airport, our premium car rental service is easily accessible. Pick up your luxury ride right after you land and start your Goan adventure in style.
+              </Typography>
+              <Box className="glass p-6 rounded-2xl border-l-4 border-l-primary-500">
+                <Typography variant="h6" color="text.primary" fontWeight="700" mb={1}>Head Office</Typography>
+                <Typography variant="body1" color="text.secondary">Dabolim Airport Road, Vasco da Gama, Goa, India 403801</Typography>
+              </Box>
+            </Box>
+            <Box sx={{ height: 450, borderRadius: 4, overflow: 'hidden', boxShadow: isDark ? '0 20px 40px -10px rgba(0,0,0,0.5)' : '0 20px 40px -10px rgba(0,0,0,0.1)' }}>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3846.992683884814!2d73.83151801533285!3d15.385559089304323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfcbd43a123eb7%3A0xe53360bbed1af90a!2sDabolim%20Airport!5e0!3m2!1sen!2sin!4v1716912345678!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={false} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* Booking Modal */}
+      <Dialog 
+        open={bookingModalOpen} 
+        onClose={() => setBookingModalOpen(false)}
+        maxWidth="sm"
+        fullWidth
+        PaperProps={{
+          sx: { borderRadius: 4, bgcolor: 'transparent', backgroundImage: 'none', boxShadow: 'none' }
+        }}
+      >
+        <Box sx={{ position: 'relative' }}>
+          <IconButton 
+            onClick={() => setBookingModalOpen(false)}
+            sx={{ position: 'absolute', right: 20, top: 20, zIndex: 10, color: 'text.secondary', bgcolor: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)', '&:hover': { bgcolor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)' } }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <BookingForm initialCarType={selectedCar} onClose={() => setBookingModalOpen(false)} />
+        </Box>
+      </Dialog>
     </>
   );
 }

@@ -22,10 +22,15 @@ const carTypes = [
   'Fortuner MT / AT'
 ];
 
-const BookingForm = () => {
+interface BookingFormProps {
+  initialCarType?: string;
+  onClose?: () => void;
+}
+
+const BookingForm = ({ initialCarType = 'Baleno MT', onClose }: BookingFormProps) => {
   const [pickup, setPickup] = useState('Goa Dabolim Airport');
   const [dropoff, setDropoff] = useState('');
-  const [carType, setCarType] = useState('Baleno MT');
+  const [carType, setCarType] = useState(initialCarType);
   const [date, setDate] = useState('');
   
   const handleBooking = () => {
