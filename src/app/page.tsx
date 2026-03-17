@@ -32,6 +32,7 @@ export default function Home() {
           alignItems: 'center',
           overflow: 'hidden',
           pt: { xs: 8, md: 0 },
+          bgcolor: '#020617', // Force dark background for premium look
         }}
       >
         {/* Background Overlay */}
@@ -41,10 +42,10 @@ export default function Home() {
             alt="Premium Car Rental Goa - Vihan Tour and Travels"
             fill
             priority
-            className="object-cover opacity-20 mix-blend-luminosity"
+            className="object-cover opacity-30 mix-blend-luminosity"
           />
         </Box>
-        <div className={`absolute inset-0 bg-gradient-to-r ${isDark ? 'from-slate-950 via-slate-900/95 to-slate-900/30' : 'from-slate-50 via-slate-100/95 to-slate-100/30'}`}></div>
+        <div className={`absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-900/30`}></div>
 
         <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 10 }}>
           <Box display="grid" gridTemplateColumns={{ xs: '1fr', lg: '1fr 400px' }} gap={{ xs: 6, lg: 12 }} alignItems="center">
@@ -55,7 +56,7 @@ export default function Home() {
                 sx={{
                   fontSize: { xs: '3rem', md: '4.5rem', lg: '5.5rem' },
                   fontWeight: 900,
-                  color: 'text.primary',
+                  color: '#f8fafc', // Force light text for readability on dark
                   lineHeight: 1.1,
                   letterSpacing: '-0.02em',
                   mb: 3,
@@ -70,7 +71,7 @@ export default function Home() {
                 variant="h2"
                 sx={{
                   fontSize: { xs: '1.125rem', md: '1.25rem' },
-                  color: 'text.secondary',
+                  color: '#94a3b8', // Force slate-400 for secondary text
                   fontWeight: 400,
                   maxWidth: 'xl',
                   mb: 5,
@@ -81,17 +82,17 @@ export default function Home() {
               </Typography>
               
               <Box className="flex flex-wrap gap-4">
-                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px]">
-                  <Typography variant="h5" color="text.primary" fontWeight="800">24/7</Typography>
-                  <Typography variant="body2" color="text.secondary" fontWeight="500">Customer Support</Typography>
+                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px] bg-slate-900/50">
+                  <Typography variant="h5" color="#f8fafc" fontWeight="800">24/7</Typography>
+                  <Typography variant="body2" color="#94a3b8" fontWeight="500">Customer Support</Typography>
                 </Box>
-                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px]">
-                  <Typography variant="h5" color="text.primary" fontWeight="800">50+</Typography>
-                  <Typography variant="body2" color="text.secondary" fontWeight="500">Premium Cars</Typography>
+                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px] bg-slate-900/50">
+                  <Typography variant="h5" color="#f8fafc" fontWeight="800">50+</Typography>
+                  <Typography variant="body2" color="#94a3b8" fontWeight="500">Premium Cars</Typography>
                 </Box>
-                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px]">
-                  <Typography variant="h5" color="text.primary" fontWeight="800">100%</Typography>
-                  <Typography variant="body2" color="text.secondary" fontWeight="500">Satisfaction</Typography>
+                <Box className="glass p-5 rounded-2xl flex-1 min-w-[140px] bg-slate-900/50">
+                  <Typography variant="h5" color="#f8fafc" fontWeight="800">100%</Typography>
+                  <Typography variant="body2" color="#94a3b8" fontWeight="500">Satisfaction</Typography>
                 </Box>
               </Box>
             </Box>
