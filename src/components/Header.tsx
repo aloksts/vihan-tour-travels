@@ -47,11 +47,16 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4, alignItems: 'center' }}>
-            {['Home', 'Fleet', 'About Goa', 'Contact'].map((item) => (
+            {[
+              { label: 'Home', href: '#home' },
+              { label: 'Fleet', href: '#fleet' },
+              { label: 'About Goa', href: '#about-us' },
+              { label: 'Contact', href: '#contact' }
+            ].map((item) => (
               <Typography
-                key={item}
+                key={item.label}
                 component="a"
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                href={item.href}
                 sx={{
                   color: 'text.secondary',
                   textDecoration: 'none',
@@ -60,7 +65,7 @@ const Header = () => {
                   '&:hover': { color: 'primary.main' },
                 }}
               >
-                {item}
+                {item.label}
               </Typography>
             ))}
           </Box>

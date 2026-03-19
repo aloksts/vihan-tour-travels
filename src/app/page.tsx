@@ -25,6 +25,7 @@ export default function Home() {
     <>
       <Box
         component="section"
+        id="home"
         sx={{
           position: 'relative',
           minHeight: '80vh',
@@ -126,36 +127,7 @@ export default function Home() {
       {/* FAQ Section */}
       <FAQ />
 
-      {/* Location Section */}
-      <Box sx={{ bgcolor: isDark ? 'rgba(2, 6, 23, 0.6)' : 'rgba(255, 255, 255, 0.6)', py: { xs: 8, md: 12 }, borderTop: '1px solid', borderColor: 'divider' }}>
-        <Container maxWidth="xl">
-          <Box display="grid" gridTemplateColumns={{ xs: '1fr', lg: '1fr 1fr' }} gap={8} alignItems="center">
-            <Box>
-              <Typography variant="h3" color="text.primary" fontWeight={800} mb={3}>
-                Premium Fleet, Prime Location
-              </Typography>
-              <Typography variant="h6" color="text.secondary" fontWeight={400} mb={4} lineHeight={1.8}>
-                Located conveniently near Dabolim Airport, our premium car rental service is easily accessible. Pick up your luxury ride right after you land and start your Goan adventure in style.
-              </Typography>
-              <Box className="glass p-6 rounded-2xl border-l-4 border-l-primary-500">
-                <Typography variant="h6" color="text.primary" fontWeight="700" mb={1}>Head Office</Typography>
-                <Typography variant="body1" color="text.secondary">Dabolim Airport Road, Vasco da Gama, Goa, India 403801</Typography>
-              </Box>
-            </Box>
-            <Box sx={{ height: 450, borderRadius: 4, overflow: 'hidden', boxShadow: isDark ? '0 20px 40px -10px rgba(0,0,0,0.5)' : '0 20px 40px -10px rgba(0,0,0,0.1)' }}>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15392.54483737!2d73.8322623!3d15.385312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb643d9b5e5fb%3A0xe7582eb7bc36df2!2sDabolim%2C%20Goa!5e0!3m2!1sen!2sin!4v1716912345678!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </Box>
-          </Box>
-        </Container>
-      </Box>
+
 
       {/* Booking Modal */}
       <Dialog 

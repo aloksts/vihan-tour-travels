@@ -11,6 +11,7 @@ const Footer = () => {
   return (
     <Box 
       component="footer" 
+      id="contact"
       sx={{ 
         bgcolor: theme.palette.mode === 'dark' ? 'rgba(2, 6, 23, 0.95)' : 'rgba(248, 250, 252, 1)', 
         color: 'text.secondary', 
@@ -42,9 +43,14 @@ const Footer = () => {
               Quick Links
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              {['Home', 'Our Fleet', 'Terms & Conditions', 'Privacy Policy'].map((item) => (
-                <Link key={item} href="#" color="inherit" underline="hover" sx={{ transition: 'color 0.2s', '&:hover': { color: 'primary.main' } }}>
-                  {item}
+              {[
+                { label: 'Home', href: '#home' },
+                { label: 'Our Fleet', href: '#fleet' },
+                { label: 'Terms & Conditions', href: '#' },
+                { label: 'Privacy Policy', href: '#' }
+              ].map((item) => (
+                <Link key={item.label} href={item.href} color="inherit" underline="hover" sx={{ transition: 'color 0.2s', '&:hover': { color: 'primary.main' } }}>
+                  {item.label}
                 </Link>
               ))}
             </Box>
