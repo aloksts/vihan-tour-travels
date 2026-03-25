@@ -3,9 +3,9 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://vihantourandtravels.com',
+      url: 'https://vihanrentals.in',
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'monthly',
       priority: 1,
     },
      // Add more URLs here as the site grows (e.g., /about, /services, /contact)

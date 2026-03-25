@@ -9,13 +9,13 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vihantourandtravels.com'),
+  metadataBase: new URL('https://vihanrentals.in'),
   title: {
-    default: 'Vihan Tour and Travels | Premium Car Rental Goa',
-    template: '%s | Vihan Tour and Travels',
+    default: 'Vihan Tour and Travels | Best Car Rental Service in Goa',
+    template: '%s | Vihan Tour and Travels Goa',
   },
-  description: 'Premium car rental services in Goa Dabolim. Book your ride today easily and explore Goa in style. Affordable rates, 24/7 support, and well-maintained fleet.',
-  keywords: ['Goa car rental', 'car hire Goa', 'Dabolim airport taxi', 'rent a car Goa', 'Vihan tour and travels', 'self drive cars Goa', 'taxi service Goa', 'premium cars Goa'],
+  description: 'Book premium car rental services in Goa with Vihan Tour and Travels. Affordable self-drive and chauffeur-driven cars at Dabolim & Mopa Airport. 24/7 support and well-maintained fleet.',
+  keywords: ['Goa car rental', 'car hire Goa', 'Dabolim airport taxi', 'rent a car Goa', 'Vihan tour and travels', 'self drive cars Goa', 'taxi service Goa', 'premium cars Goa', 'Mopa airport car rental', 'luxury car rental Goa'],
   authors: [{ name: 'Vihan Tour and Travels' }],
   creator: 'Vihan Tour and Travels',
   publisher: 'Vihan Tour and Travels',
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://vihanrentals.in',
   },
   openGraph: {
     title: 'Vihan Tour and Travels | Premium Car Rental Goa',
     description: 'Premium car rental services in Goa Dabolim. Affordable rates, 24/7 support, and well-maintained fleet. Book your ride today easily and explore Goa in style.',
-    url: 'https://vihantourandtravels.com',
+    url: 'https://vihanrentals.in',
     siteName: 'Vihan Tour and Travels',
     images: [
       {
@@ -75,15 +75,41 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Vihan Tour and Travels',
-    description: 'Premium car rental services in Goa Dabolim. Affordable rates, 24/7 support, and well-maintained fleet.',
-    url: 'https://vihantourandtravels.com',
-    telephone: '+91-XXXXXXXXXX', // WARNING: Please update with the actual contact number
+    description: 'Premium car rental services in Goa. Affordable rates, 24/7 support, and wide range of well-maintained vehicles including hatchbacks, SUVs and luxury cars.',
+    url: 'https://vihanrentals.in',
+    telephone: '+91-9765460182',
+    image: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Umiya Habitat',
       addressLocality: 'Dabolim',
       addressRegion: 'Goa',
+      postalCode: '403801',
       addressCountry: 'IN',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '15.3855',
+      longitude: '73.8647'
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday'
+      ],
+      opens: '00:00',
+      closes: '23:59'
+    },
+    sameAs: [
+      'https://www.facebook.com/vihantourandtravels',
+      'https://www.instagram.com/vihantourandtravels'
+    ]
   };
 
   return (

@@ -50,7 +50,7 @@ const AboutUs = () => {
           <Box sx={{ position: 'relative', height: { xs: '400px', md: '600px' }, width: '100%', borderRadius: 6, overflow: 'hidden', boxShadow: isDark ? '0 20px 40px rgba(0,0,0,0.4)' : '0 20px 40px rgba(0,0,0,0.1)' }}>
             <Image 
               src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-              alt="About Vihan Tour and Travels - Premium Car Rental Goa" 
+              alt="Vihan Tour and Travels office and premium car rental service team in Goa" 
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
               sizes="(max-width: 1200px) 100vw, 50vw"

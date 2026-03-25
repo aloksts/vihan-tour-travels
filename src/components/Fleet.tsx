@@ -40,7 +40,7 @@ const Fleet = ({ onBookNow }: FleetProps) => {
               <Box sx={{ height: 260, width: '100%', position: 'relative', overflow: 'hidden', bgcolor: isDark ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)' }}>
                 <Image 
                   src={car.img} 
-                  alt={`${car.name} - Premium Car Rental in Goa by Vihan Tours & Travels`} 
+                  alt={`${car.name} ${car.type} - Affordable Car Hire and Self Drive Rental in Goa by Vihan Tours & Travels`} 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105" 

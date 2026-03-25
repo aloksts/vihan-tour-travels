@@ -69,11 +69,11 @@ const Footer = () => {
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                 <PhoneIcon color="primary" />
-                <Typography variant="body2" color="text.primary" fontWeight={500}>+91 98765 43210</Typography>
+                <Typography variant="body2" color="text.primary" fontWeight={500}>+91 97654 60182</Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                 <EmailIcon color="primary" />
-                <Typography variant="body2" color="text.primary" fontWeight={500}>bookings@vihantravels.com</Typography>
+                <Typography variant="body2" color="text.primary" fontWeight={500}>info@vihanrentals.in</Typography>
               </Box>
             </Box>
           </Box>

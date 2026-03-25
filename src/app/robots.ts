@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/'], // Add any private routes here if they exist in the future
     },
-    sitemap: 'https://vihantourandtravels.com/sitemap.xml',
+    sitemap: 'https://vihanrentals.in/sitemap.xml',
   };
 }
