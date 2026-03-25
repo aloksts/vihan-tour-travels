@@ -6,7 +6,9 @@ import BookingForm from '@/components/BookingForm';
 import FAQ from '@/components/FAQ';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import AboutUs from '@/components/AboutUs';
-import Fleet from '@/components/Fleet';
+import dynamic from 'next/dynamic';
+
+const Fleet = dynamic(() => import('@/components/Fleet'), { ssr: false });
 import Image from 'next/image';
 
 
