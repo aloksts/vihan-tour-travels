@@ -88,7 +88,7 @@ const Header = () => {
               variant="contained"
               color="secondary"
               startIcon={<WhatsAppIcon />}
-              href="https://wa.me/919876543210?text=Hello%20Vihan%20tours%20%26%20travels!%20I%20would%20like%20to%20inquire%20about%20a%20car%20rental%20in%20Goa."
+              href="https://wa.me/919765460182?text=Hello%20Vihan%20tours%20%26%20travels!%20I%20would%20like%20to%20inquire%20about%20a%20car%20rental%20in%20Goa."
               target="_blank"
               sx={{ display: { xs: 'none', sm: 'flex' }, fontWeight: 'bold' }}
             >

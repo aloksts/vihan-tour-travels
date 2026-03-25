@@ -31,6 +31,6 @@ describe('Header Component', () => {
     renderWithTheme(<Header />);
     const bookNowButton = screen.getByRole('link', { name: /book now/i });
     expect(bookNowButton).toBeInTheDocument();
-    expect(bookNowButton).toHaveAttribute('href', expect.stringContaining('https://wa.me/919876543210'));
+    expect(bookNowButton).toHaveAttribute('href', expect.stringContaining('https://wa.me/919765460182'));
   });
 });

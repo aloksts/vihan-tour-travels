@@ -52,7 +52,7 @@ describe('BookingForm Component', () => {
     
     // Check if URL starts with wa.me and contains our fields
     const urlCalled = mockWindowOpen.mock.calls[0][0];
-    expect(urlCalled).toContain('https://wa.me/919876543210');
+    expect(urlCalled).toContain('https://wa.me/919765460182');
     expect(urlCalled).toContain('Goa Dabolim Airport');
     expect(urlCalled).toContain('Swift MT / AT');
     expect(urlCalled).toContain('2026-03-25');
