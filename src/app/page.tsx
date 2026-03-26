@@ -148,7 +148,7 @@ export default function Home() {
           >
             <CloseIcon />
           </IconButton>
-          <BookingForm initialCarType={selectedCar} onClose={() => setBookingModalOpen(false)} />
+          <BookingForm initialCarType={selectedCar} isFixedCar={true} onClose={() => setBookingModalOpen(false)} />
         </Box>
       </Dialog>
     </>

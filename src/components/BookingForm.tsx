@@ -25,9 +25,10 @@ const carTypes = [
 interface BookingFormProps {
   initialCarType?: string;
   onClose?: () => void;
+  isFixedCar?: boolean;
 }
 
-const BookingForm = ({ initialCarType = 'Baleno MT', onClose }: BookingFormProps) => {
+const BookingForm = ({ initialCarType = 'Baleno MT', onClose, isFixedCar = false }: BookingFormProps) => {
   const [pickup, setPickup] = useState('Goa Dabolim Airport');
   const [dropoff, setDropoff] = useState('');
   const [carType, setCarType] = useState(initialCarType);
@@ -65,6 +66,7 @@ const BookingForm = ({ initialCarType = 'Baleno MT', onClose }: BookingFormProps
         />
         <TextField
           select
+          disabled={isFixedCar}
           label="Car Type"
           variant="outlined"
           value={carType}
