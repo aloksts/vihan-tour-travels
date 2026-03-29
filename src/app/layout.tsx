@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     siteName: 'Vihan Rentals',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', // Replace with an actual high-quality branding image when available
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Vihan Tour and Travels - Premium Car Rental in Goa',
+        alt: 'Vihan Rentals - Premium Car Rental in Goa',
       },
     ],
     locale: 'en_IN',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Vihan Tour and Travels | Premium Car Rental Goa',
     description: 'Premium car rental services in Goa Dabolim. Book your ride today easily and explore Goa in style.',
-    images: ['https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'], // Same as OG image
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -78,7 +78,7 @@ export default function RootLayout({
     description: 'Premium car rental services in Goa. Affordable rates, 24/7 support, and wide range of well-maintained vehicles including hatchbacks, SUVs and luxury cars.',
     url: 'https://vihanrentals.in',
     telephone: '+91-9765460182',
-    image: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://vihanrentals.in/og-image.png',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Umiya Habitat',
